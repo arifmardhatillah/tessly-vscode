@@ -1,0 +1,74 @@
+{
+  "name": "tessly",
+  "displayName": "Tessly: AI Token Tracker",
+  "description": "See how many tokens Claude Code uses today, this month and this year, right in the status bar.",
+  "version": "0.1.0",
+  "publisher": "arifmardhatillah",
+  "author": "Arif Mardhatillah",
+  "license": "MIT",
+  "icon": "images/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arifmardhatillah/tessly-vscode"
+  },
+  "homepage": "https://arifmardhatillah.github.io/Tessly/",
+  "bugs": "https://github.com/arifmardhatillah/tessly-vscode/issues",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Visualization",
+    "Other"
+  ],
+  "keywords": [
+    "claude",
+    "claude code",
+    "tokens",
+    "usage",
+    "tracker",
+    "ai"
+  ],
+  "galleryBanner": {
+    "color": "#1a1210",
+    "theme": "dark"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./src/extension.js",
+  "extensionKind": [
+    "workspace",
+    "ui"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "tessly.open",
+        "title": "Open Dashboard",
+        "category": "Tessly"
+      },
+      {
+        "command": "tessly.refresh",
+        "title": "Re-read Claude Code Logs",
+        "category": "Tessly"
+      }
+    ],
+    "configuration": {
+      "title": "Tessly",
+      "properties": {
+        "tessly.showStatusBar": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show today's token total in the status bar."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.6.0"
+  }
+}

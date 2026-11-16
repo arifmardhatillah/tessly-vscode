@@ -1,0 +1,10 @@
+/* Penyesuaian dashboard untuk tab VS Code. */
+
+/* VS Code memberi body padding bawaan; dashboard mengatur jaraknya sendiri. */
+body { padding: 0; }
+
+/* Jalan otomatis dan update diurus VS Code sendiri. */
+.in-vscode #frm .check,
+.in-vscode #btnCheckUpd,
+.in-vscode #verBar,
+.in-vscode #upd { display: none !important; }
